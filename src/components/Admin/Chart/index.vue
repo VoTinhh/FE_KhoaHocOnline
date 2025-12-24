@@ -56,7 +56,7 @@ export default {
           this.chartData.labels = res.data.labels_x;
           this.chartData.datasets[0].data = res.data.data_x;
 
-          // tạo màu random cho mỗi đối tượng
+          // tạo màu random cho mỗi phần tử
           this.chartData.datasets[0].backgroundColor = res.data.data_x.map(() => {
             return '#' + Math.floor(Math.random() * 16777215).toString(16);
           });
