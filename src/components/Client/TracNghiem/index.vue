@@ -45,7 +45,6 @@
         </div>
     </div>
 
-    <!-- Modal Kết Quả -->
         <div class="modal fade" id="ketQuaModal" tabindex="-1" aria-labelledby="ketQuaModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content shadow-lg border-0">
