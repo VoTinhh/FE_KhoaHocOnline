@@ -101,7 +101,8 @@
                 allowfullscreen></iframe>
             <h4 class="text-danger mt-2 text-center">{{ formatVND(chi_tiet_khoa_hoc.gia_ban) }}</h4>
             <div class="text-center">
-                <button v-on:click="muaKhoaHoc()" type="button" class="btn btn-primary px-5 radius-30 mt-2">ĐĂNG KÝ HỌC</button>
+                <button v-on:click="muaKhoaHoc()" type="button" class="btn btn-primary px-5 radius-30 mt-2">ĐĂNG KÝ
+                    HỌC</button>
             </div>
             <div class="d-flex justify-content-between mt-3">
                 <p><i class="fa-solid fa-gauge-high"></i> Trình độ cơ bản</p>
@@ -114,55 +115,56 @@
 </template>
 <script>
 import axios from 'axios';
+
 export default {
-    props : ['id_khoa_hoc','slug_khoa_hoc'],
+    props: ['id_khoa_hoc', 'slug_khoa_hoc'],
     data() {
         return {
-            chi_tiet_khoa_hoc : {}
+            chi_tiet_khoa_hoc: {}
         }
     },
     mounted() {
-      this.loadChiTietKhoaHoc()  
+        this.loadChiTietKhoaHoc()
     },
     methods: {
-        muaKhoaHoc(){
+        muaKhoaHoc() {
             var payload = {
-                id_khoa_hoc : this.id_khoa_hoc,
-                so_tien_mua : this.chi_tiet_khoa_hoc.gia_ban
+                id_khoa_hoc: this.id_khoa_hoc,
+                so_tien_mua: this.chi_tiet_khoa_hoc.gia_ban
             }
             axios
-                .post("http://127.0.0.1:8000/api/home-page/mua-khoa-hoc/create", payload,{
-                    headers : {
+                .post("http://127.0.0.1:8000/api/home-page/mua-khoa-hoc/create", payload, {
+                    headers: {
                         Authorization: 'Bearer ' + localStorage.getItem("key_khach_hang")
                     }
                 })
                 .then((res) => {
-                    if(res.data.status==1){
+                    if (res.data.status == 1) {
                         this.$toast.success(res.data.message)
                         this.$router.push('/danh-sach-khoa-hoc')
                     }
-                    else if(res.data.status == 2){
+                    else if (res.data.status == 2) {
                         this.$toast.warning(res.data.message);
                         this.$router.push('/profile')
                     }
-                    else{
+                    else {
                         this.$toast.error(res.data.message);
                     }
                 }).catch((res) => {
                     this.$toast.error('Vui lòng đăng nhập để mua khóa học');
                 })
         },
-        formatVND(number){
-            return new Intl.NumberFormat('vi-VI', { style: 'currency', currency: 'VND' }).format( number,)
+        formatVND(number) {
+            return new Intl.NumberFormat('vi-VI', { style: 'currency', currency: 'VND' }).format(number,)
         },
-        loadChiTietKhoaHoc(){
+        loadChiTietKhoaHoc() {
             axios
                 .get("http://127.0.0.1:8000/api/home-page/loai-khoa-hoc/chi-tiet/" + this.id_khoa_hoc)
                 .then((res) => {
-                    if(res.data.status==1){
+                    if (res.data.status == 1) {
                         this.chi_tiet_khoa_hoc = res.data.data;
                     }
-                    else{
+                    else {
                         this.$toast.error(res.data.message);
                         this.$toast.push('/');
                     }
