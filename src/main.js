@@ -6,6 +6,7 @@ import Blank from './layout/wrapper/index_blank.vue'
 import Client from './layout/wrapper/index_client.vue'
 import Toaster from "@meforma/vue-toaster";
 import vue3GoogleLogin from 'vue3-google-login';
+
 const app = createApp(App)
 
 app.use(router)
