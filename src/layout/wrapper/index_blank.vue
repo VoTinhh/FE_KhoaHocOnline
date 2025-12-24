@@ -7,6 +7,7 @@
 		</div>
 	</div>
 </template>
+
 <script>
 import "../../assets/js/bootstrap.bundle.min.js";
 import "../../assets/js/jquery.min.js";
@@ -22,6 +23,7 @@ export default {
     }
 }
 </script>
+
 <style>
 @import "../../assets/plugins/simplebar/css/simplebar.css";
 @import "../../assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css";
