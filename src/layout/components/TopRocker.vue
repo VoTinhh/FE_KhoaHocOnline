@@ -1,5 +1,4 @@
 <template>
-
 	<div class="topbar d-flex align-items-center">
 		<nav class="navbar navbar-expand">
 			<div class="topbar-logo-header">
@@ -386,6 +385,7 @@
 </template>
 <script>
 import axios from 'axios';
+
 export default {
 	data() {
 		return {
