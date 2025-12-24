@@ -6,9 +6,6 @@
             <!-- Left -->
             <div class="me-5">
             </div>
-            <!-- Left -->
-
-            <!-- Right -->
             <div>
                 <a href="" class="text-white me-4">
                     <i class="fab fa-facebook-f"></i>
