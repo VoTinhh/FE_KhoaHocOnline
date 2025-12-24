@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal lịch sử -->
+    <!-- Modal history -->
     <div class="modal fade" id="lichsuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
