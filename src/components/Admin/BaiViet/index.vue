@@ -104,7 +104,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal xoá-->
+    <!-- Modal delete-->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -138,7 +138,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal cập nhật-->
+    <!-- Modal update-->
     <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
