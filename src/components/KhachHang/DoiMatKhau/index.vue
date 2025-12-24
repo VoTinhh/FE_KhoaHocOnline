@@ -55,6 +55,7 @@
 </template>
 <script>
 import axios from 'axios'
+
 export default {
     props: ['hash_reset'],
     data() {
