@@ -12,6 +12,7 @@
         <BotClient></BotClient>
 	</div>
 </template>
+
 <script>
 import TopClient from "../components/TopClient.vue";
 import BotClient from "../components/BotClient.vue";
@@ -24,13 +25,16 @@ import "../../assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js";
 import "../../assets/js/index.js";
 import "../../assets/js/app.js";
 import "../../assets/js/pace.min.js";
+
 export default {
     name        :   "app",
     components  :   {
         TopClient, MenuClient, BotClient
     }
 }
+
 </script>
+
 <style>
 @import "../../assets/plugins/simplebar/css/simplebar.css";
 @import "../../assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css";
