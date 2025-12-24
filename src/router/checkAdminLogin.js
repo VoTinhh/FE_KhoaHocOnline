@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export default function(from, to, next) {
     axios
         .get("http://127.0.0.1:8000/api/admin/nhan-vien/check-login", {
