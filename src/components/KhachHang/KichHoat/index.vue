@@ -3,6 +3,7 @@
 </template>
 <script>
 import axios from 'axios'
+
 export default {
     props: ["id_khach_hang"],
     mounted() {
